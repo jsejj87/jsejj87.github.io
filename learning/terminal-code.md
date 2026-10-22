@@ -124,11 +124,13 @@ git branch -a             # GitHub 브랜치까지 전부
 
 ## 13. Git 저장·보내기
 ```powershell
-git add 파일경로                    # 그 파일만 준비
-git add .                          # 바뀐 파일 전부 준비 (띄어쓰기 필수)
-git commit -m "feat: 내용"          # 기록 남기기
-git push -u origin 브랜치이름         # 처음 올릴 때 (연결 기억)
-git push                           # 두 번째부터
+git add 파일경로                        # 그 파일만 준비
+git add .                              # 바뀐 파일 전부 준비 (띄어쓰기 필수)
+git commit -m "feat: 내용"              # 기록 남기기
+git push -u origin 브랜치타입/브랜치명    # 처음 올릴 때 (연결 기억)  
+                  #  브랜치타입 : feature, fix, docs, hotfix, refactor, release ... 
+                  #  브랜치명 : 작업내용으로 알아보기쉽게 정함
+git push                               # 두 번째부터
 ```
 
 ## 14. Git 가져오기
