@@ -47,6 +47,7 @@ git push -u origin feature/브랜치이름          # GitHub에 내 브랜치 �
 ## 4. PR 만들기 (GitHub)
 1. 팀 레포 **Pull requests** 탭 → **New pull request**
 2. **base: develop** / **compare: 내 브랜치** ← base가 main으로 돼 있으면 꼭 바꾸기
+-> 팀장이 base기본값을 develop으로 설정 가능 (Settings->General->Default branch)
 3. **Create pull request** → 제목, 설명 작성
 4. 오른쪽 **Reviewers** 톱니바퀴 → 팀원 선택
 5. **Create pull request**
@@ -85,7 +86,20 @@ git remote -v         # 이 폴더가 연결된 GitHub 주소
 - `[main ↓1]` : GitHub보다 1개 뒤처짐 → `git pull` 필요
 - `[feature/... +0 ~1 -0 !]` : 수정한 파일 1개, 아직 add 안 함
 
-## 9. 헷갈렸던 것
+## 9. 기타
 - PR은 **브랜치 하나당 하나**
 - merge 전이면 같은 브랜치에서 고치고 push → 기존 PR에 반영 (승인 다시 받아야 할 수 있음)
 - 응답 코드: 삭제 성공을 204로 하면 **메시지 없이** `return`만
+## 10. 팀장세팅(필수아님)
+1. base:main인것을 base:develop으로 default branch 변경 
+  - Settings → General → Default branch를 develop 으로 변경
+2. merge 후 브랜치 자동 삭제 (merge 후 Delete branch 안눌러도 됨)
+  - Settings → General → Automatically delete head branches
+3. 보호규칙(1명이상 리뷰승인하도록)
+  (1) 저장소 Settings 탭
+  (2) 왼쪽 메뉴 Rules → Rulesets → New ruleset → New branch ruleset
+  (3) Rulset Name에 이름 적고(이름은 아무거나), Enforcement status를 Active로 
+      -> Rulset Name 이름 예시 : develop만 보호시(protect-develop) / main,develop둘다 보호시(protect-main-develop)
+  (4) Target branches → Add target → develop 추가
+  (5) Require a pull request before merging 체크 → Required approvals를 1로
+  (6) 맨 아래 Create
