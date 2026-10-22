@@ -96,10 +96,10 @@ git remote -v         # 이 폴더가 연결된 GitHub 주소
 2. merge 후 브랜치 자동 삭제 (merge 후 Delete branch 안눌러도 됨)
   - Settings → General → Automatically delete head branches
 3. 보호규칙(1명이상 리뷰승인하도록)
-  (1) 저장소 Settings 탭
-  (2) 왼쪽 메뉴 Rules → Rulesets → New ruleset → New branch ruleset
-  (3) Rulset Name에 이름 적고(이름은 아무거나), Enforcement status를 Active로 
-      -> Rulset Name 이름 예시 : develop만 보호시(protect-develop) / main,develop둘다 보호시(protect-main-develop)
-  (4) Target branches → Add target → develop 추가
-  (5) Require a pull request before merging 체크 → Required approvals를 1로
-  (6) 맨 아래 Create
+- (1) 저장소 Settings 탭
+- (2) 왼쪽 메뉴 Rules → Rulesets → New ruleset → New branch ruleset
+- (3) Rulset Name에 이름 적고(이름은 아무거나), Enforcement status를 Active로 
+    -> Rulset Name 이름 예시 : develop만 보호시(protect-develop) / main,develop둘다 보호시(protect-main-develop)
+- (4) Target branches → Add target → develop 추가
+- (5) Require a pull request before merging 체크 → Required approvals를 1로
+- (6) 맨 아래 Create
