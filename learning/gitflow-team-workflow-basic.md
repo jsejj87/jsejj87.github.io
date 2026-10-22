@@ -24,7 +24,8 @@ git switch -c feature/브랜치이름     # develop을 바탕으로 내 브랜�
 - VS Code에서 코드 수정 → `Ctrl + S` 저장
 - 서버 켜기
 ```bash
-python -m uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload     # 서버 켜기
+python -m fastapi dev                       # 짧은 버전 (main.py 자동으로 찾음)
 ```
   - `app.main:app` = app 폴더의 main.py 안의 app을 실행
   - `--reload` = 저장하면 서버가 알아서 다시 켜짐
