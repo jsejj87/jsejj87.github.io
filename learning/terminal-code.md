@@ -80,8 +80,11 @@ python -m uv run 명령                    # .venv 환경으로 명령 실행
 
 ## 8. FastAPI 서버 + Swagger
 ```powershell
-python -m uvicorn app.main:app --reload     # 서버 켜기
-python -m fastapi dev                       # 짧은 버전 (main.py 자동으로 찾음)
+python -m uvicorn fastapi.main:app --reload     # 서버 켜기
+   -> python -m uvicorn  --reload 는 기본값. 
+      그사이 fastapi는 폴더명/main은 파일명에서 .py제외 /app은 FastAPI()를 담은변수명
+
+python -m fastapi dev                           # 짧은 버전 (main.py 자동으로 찾음)
 ```
 - `app.main:app` = app 폴더 → main.py → 안의 app
 - `--reload` = 코드 저장하면 자동 재시작
